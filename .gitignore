@@ -1,0 +1,16 @@
+# Dependencies and generated files
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Environment variables and credentials
+.env
+.env.local
+.env.*.local
+!.env.example
+urbanride-504310-3dae12459557.json
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+AI class/
