@@ -25,7 +25,7 @@ export function ReelEnhancer() {
     });
     const section = videos[0]?.closest('section');
     const heading = section?.querySelector('h2');
-    if (heading && !section.querySelector('.reel-intro')) heading.insertAdjacentHTML('afterend', '<p class="reel-intro">Explore the helmet up close and see it in everyday play.</p>');
+    if (heading && section && !section.querySelector('.reel-intro')) heading.insertAdjacentHTML('afterend', '<p class="reel-intro">Explore the helmet up close and see it in everyday play.</p>');
   }, []);
   return null;
 }
