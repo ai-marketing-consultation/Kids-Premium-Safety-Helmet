@@ -4,9 +4,14 @@
 html { scroll-behavior: smooth; }
 body { @apply bg-[#f8f8f5] text-ink antialiased; overflow-x: hidden; }
 @layer components { .shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; } .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3.5 font-bold transition hover:-translate-y-0.5; } .btn-primary { @apply btn bg-lime text-black shadow-glow hover:bg-[#caff14]; } .btn-dark { @apply btn bg-ink text-white hover:bg-black; } .eyebrow { @apply text-xs font-extrabold uppercase tracking-[.18em] text-[#5f652d]; } .card { @apply rounded-3xl border border-black/5 bg-white; } }
-.quick-order { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 50; border-radius: 9999px; background: #d9ff3f; color: #151719; padding: .9rem 1.3rem; font-size: .8rem; font-weight: 900; letter-spacing: .05em; box-shadow: 0 12px 30px rgba(0,0,0,.25); transition: transform .2s ease; }
+.quick-order { position: fixed; right: 2rem; bottom: 2rem; z-index: 50; border-radius: 9999px; background: #d9ff3f; color: #151719; padding: .9rem 1.3rem; font-size: .8rem; font-weight: 900; letter-spacing: .05em; box-shadow: 0 12px 30px rgba(0,0,0,.25); transition: transform .2s ease; }
 .quick-order:hover { transform: translateY(-2px); }
 #details > div:first-child > p > span { display: inline-block; width: .75rem; height: .75rem; border: 1px solid #151719; border-radius: 9999px; color: transparent !important; vertical-align: -1px; }
 #details > div:first-child > p > span:nth-of-type(1) { background: #f472b6; }
 #details > div:first-child > p > span:nth-of-type(2) { background: #dc2626; }
 #details > div:first-child > p > span:nth-of-type(3) { background: #fff; }
+.reel-card { position: relative; width: min(100%, 320px) !important; margin-inline: auto; }
+.reel-card .reel-overlay { position: absolute; inset: 40% auto auto 50%; z-index: 2; display: grid; height: 70px; width: 70px; place-items: center; transform: translate(-50%, -50%); border: 2px solid rgba(255,255,255,.8); border-radius: 9999px; background: rgba(21,23,25,.78); color: #d9ff3f; font-size: 1.5rem; padding-left: 5px; backdrop-filter: blur(8px); }
+.reel-intro { margin-top: .8rem; max-width: 36rem; color: rgba(21,23,25,.65); font-size: 1.05rem; line-height: 1.75; }
+section:has(.reel-card) > .shell > .grid { justify-content: center; gap: 1.5rem; }
+@media (max-width: 640px) { .quick-order { right: 1rem; bottom: 1rem; } }
